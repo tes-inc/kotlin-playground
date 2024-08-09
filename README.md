@@ -25,6 +25,40 @@ Spring Boot + Kotlin の Web アプリケーションを動かせるプレイグ
 
 ### 1.プロジェクトのクローン
 
+任意のディレクトリでクローンする。
+
 ```zsh
-git clone 
+git clone git@github.com:tes-inc/kotlin-playground.git
 ```
+
+プロジェクトディレクトリに移動する。
+
+```zsh
+cd kotlin-playground
+```
+
+### 2. Docker で環境をビルド
+
+```zsh
+docker compose build
+```
+
+実行が終わったら http://localhost:8080/users にアクセスして簡素な User List 画面が表示されることを確認する。
+
+問題なければいったん Ctrl + C でコンテナを停止させる。
+
+環境構築としては以上でおわり。
+
+## 環境構築後の実行方法
+
+前提として、プロジェクトフォルダを IntelliJ で開いてること。
+
+#### Docker コンテナを IntelliJ から実行する
+
+IntelliJ の右上にある実行構成の一覧から「ぷれいぐらうんど」を選択して実行ボタンを押す。
+
+#### デバッグモード起動設定
+
+IntelliJ の右上にある実行構成の一覧から「ぷれでばっぐ」を選択して実行ボタンを押す。
+
+デバッグモードでアプリケーションが起動するので、エディタ上でブレイクポイントを付ければデバッグが普通にできる。
